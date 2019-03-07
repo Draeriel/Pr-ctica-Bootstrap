@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TODO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <style>
+    h3 {
+            color: #2F0601
+        }
+        h4 {
+            color: #553A41
+        }
+        .icon {
+    float: left;
+    width: 50px;
+    padding: 2vw;
+  }
+        .stars {
+            max-width: 180px;
+        }
+        .stars-small {
+            max-width: 50px;
+        }
+        .fab, .far {
+    font-size: 3em;
+    width: 2em;
+    height: 1.5em;
+    text-align: center;
+  }
+  label {
+    color: #A3E7FC
+  }
+  .my-button {
+    background: linear-gradient(rgba(163, 231, 252, 1), rgba(38, 196, 133, 1), rgba(50, 144, 143, 1));
+    color:#2F0601;
+  }
+</style>
+</head>
+
+<body style="background-color: #32908F">
+  <nav class="navbar" style="background-color: #2F0601">
+    <img style="width:100px" src="https://99designs-start-attachments.imgix.net/alchemy-pictures/2016%2F02%2F22%2F04%2F07%2F21%2F9757e437-5ec1-4378-804f-ca0f9567c110%2F380048_Widakk.png?auto=format&ch=Width%2CDPR&w=250&h=250" />
+    <form class="form-inline">
+            <div style="margin-right:25vw">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn my-button" type="submit">Buscar</button>
+                  </div>
+      <div>
+          <div>
+              <a class="btn my-button" data-toggle="modal" data-target="#identificacion">
+                  Iniciar sesión/Registrarse</a>
+          </div>
+    </form>
+  </nav>
+    <div class="row">
+        <div class="col-3" style="background-color: #A3E7FC">
+            <ul class="nav nav-tabs flex-column">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">Instrumentos de teclas</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Teclados</a>
+                        <a class="dropdown-item" href="#">Sintetizadores</a>
+                        <a class="dropdown-item" href="#">Pianos de pared</a>
+                        <a class="dropdown-item" href="#">Pianos de cola</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">Guitarras y bajos</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Guitarras eléctricas</a>
+                        <a class="dropdown-item" href="#">Guitarras acústicas</a>
+                        <a class="dropdown-item" href="#">Bajos eléctricos</a>
+                        <a class="dropdown-item" href="#">Otros instrumentos de cuerda</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">Baterías y percusión</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Baterías acústicas</a>
+                        <a class="dropdown-item" href="#">Baterías electrónicas</a>
+                        <a class="dropdown-item" href="#">Baquetas</a>
+                        <a class="dropdown-item" href="#">Platillos</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-9">
+            <div class="row col-12">
+                <div class="col-9">
+                    <div class="container" style="padding: 3vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 3vh 2vh 3vh 2vh;">
+                            <div class="row col-12" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0;">
+                                <div class="col-9">
+                                    <h3 class="col-12">Korg Kronos 88</h3>
+                                    <img class="stars" src="https://bit.ly/2Et29OR">
+                                </div>
+                                <div class="col-3">
+                                    <img style="padding: 3vh; max-height: 500px" src="https://bit.ly/2UhoFRI" />
+                                </div>
+                                <div class="col-12" style="border: #32908f 2px solid; margin-top: 3vh">
+                                    <img style="margin-top: 6vh; width: 100%" src="https://bit.ly/2TnPVRj" />
+                                </div>
+                                <div class="row" style="margin-top: 3vh; margin-left: 0; width: 100%">
+                                    <div class="col-3 d-flex align-items-center" style="border: #32908f 1px solid;">
+                                        <img style="width: 100%;" src="https://bit.ly/2TnPVRj" />
+                                    </div>
+                                    <div class="col-3 d-flex align-items-center" style="border: #32908f 1px solid;">
+                                        <img style="width: 100%;" src="https://bit.ly/2SA9t0g" />
+                                    </div>
+                                    <div class="col-3 d-flex align-items-center" style="border: #32908f 1px solid;">
+                                        <img style="width: 100%;" src="https://bit.ly/2tR9UJA" />
+                                    </div>
+                                    <div class="col-3 d-flex align-items-center" style="border: #32908f 1px solid;">
+                                        <img style="width:100%;" src="https://bit.ly/2C1cNMu" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="padding: 3vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 3vh 2vh 3vh 2vh;">
+                            <div class="row col-s12" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0;">
+                                <div class="col-8">
+                                    <h5>Sintetizador</h5>
+                                    <ul class="list-unstyled">
+                                        <li>Con 88 teclas de acción martillo graduada RH3</li>
+                                        <li>9 motores de sonido: SGX-2, EP-1, HD-1, AL-1, CX-3, STR-1, MOD-7, MS-20EX y
+                                            PolysixEX</li>
+                                        <li> Combis de 16 partes</li>
+                                        <li> Transición de sonido suave</li>
+                                        <li> Efectos incorporados</li>
+                                        <li> Modo 'Set List'</li>
+                                        <li>Pantalla TFT TouchViewTM de 8"</li>
+                                        <li> El secuenciador incorporado ofrece 16 pistas MIDI + 16 pistas de audio
+                                            (calidad de
+                                            grabación de 24 bits / 48kHz)</li>
+                                        <li> Sistema de sampling abierto</li>
+                                        <li> Tecnología KARMA incorporada</li>
+                                        <li> Salidas L/MONO, R principal TRS de 1/4" balanceada</li>
+                                        <li> 4 salidas individuales TRS de 6,3mm balanceadas</li>
+                                        <li> Entrada/Salida S/PDIF óptica</li>
+                                        <li> Entradas de audio: 1 y 2 TRS de 1/4" balanceadas, 2 USB A (para
+                                            dispositivos
+                                            USB
+                                            externos)
+                                            y 1 USB B (Interface de Audio/MIDI)</li>
+                                        <li> MIDI In/Out/Thru</li>
+                                        <li> Conexiones: Pedal 'Damper' (soporta función de semiapagador), controlador
+                                            de
+                                            pie y
+                                            conmutador de pedal</li>
+                                        <li>Unidad SSD de 62 GB (2,5") incorporada</li>
+                                        <li>Paneles laterales de madera</li>
+                                        <li>Dimensiones: 1443 x 371 x 148mm (ancho x profundo x alto)</li>
+                                        <li> Peso: 24,1kg</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-4">
+                                    <h5>Más información</h5>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Número de teclas:</strong> 88</li>
+                                        <li><strong>Sensibilidad dinámica:</strong> Sí</li>
+                                        <li><strong>Aftertouch:</strong> Sí</li>
+                                        <li><strong>División de teclado:</strong> Sí</li>
+                                        <li><strong>Rueda de modulación:</strong> Sí</li>
+                                        <li><strong>Voces de polifonía:</strong> 200</li>
+                                        <li><strong>Motor de sonido Modelado, basado en Samples, virtual analógico</strong></li>
+                                        <li><strong>Interfaz MIDI 1x In, 1x Out, 1x Thru</strong></li>
+                                        <li><strong>Medio de almacenamiento SSD, USB to Device</strong></li>
+                                        <li><strong>USB-anslutning:</strong> Sí</li>
+                                        <li><strong>Efectos:</strong> Sí</li>
+                                        <li><strong>Arpeggiator:</strong> Sí</li>
+                                        <li><strong>Sampler:</strong> Sí</li>
+                                        <li><strong>Número de salidas analógicas:</strong> 6</li>
+                                        <li><strong>Salida digital:</strong> Sí</li>
+                                        <li><strong>Conexiones de pedal:</strong> 3</li>
+                                        <li><strong>Tarjeta de expansión opcional:</strong> No</li>
+                                        <li><strong>Display:</strong> Sí</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="padding: 3vh 2vh 3vh 2vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 2vh 1vh 2vh 1vh;">
+                            <div class="row col-s12" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0; position: relative;">
+                                <div>
+                                    <div class="float-right" style="border:#26C485 1px solid; padding: 1vw;">
+                                        <div>
+                                            Total <img class="stars-small" style="float: right; margin-top: 5px;" src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Uso <img class="stars-small" style="float: right; margin-top: 5px;" src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Características <img class="stars-small" style="float: right; margin-top: 5px;"
+                                                src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Sonido <img class="stars-small" style="float: right; margin-top: 5px;" src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Fabricación <img class="stars-small" style="float: right; margin-top: 5px;"
+                                                src="https://bit.ly/2Et29OR">
+                                        </div>
+                                    </div>
+                                    <small>Mr.X, 18/07/2018</small>
+                                    <p>I am a professional keyboard player and was looking to upgrade my main keyboard.
+                                        The Kronos was the obvious choice as there is nothing on the market to beat it,
+                                        in
+                                        my opinion.</p>
+                                    <p>The build quality is excellent, aesthetically pleasing with wooden ends and a
+                                        body
+                                        that is slimmer than most other boards of a similar size. The Kronos is 12lbs
+                                        lighter than the Roland Fantom X8 I have been using (in itself a great
+                                        keyboard,
+                                        the Roland sounds are top notch).</p>
+                                    <p>The knobs, faders and buttons of the Kronos are very sensibly laid out and easy
+                                        to
+                                        understand along with the weighted keyboard having a second to none quality,
+                                        from a
+                                        pianistic point of view it just feels right.
+                                        (If your looking for a synth feel, Korg make a 61 keyboard version with the
+                                        same
+                                        internal workings).</p>
+                                    <p>The capabilities of the Kronos are nothing short of excellent.
+                                        Starting with the colour touch view screen which includes the manual using the
+                                        'help' button, making it easy to understand the workings of this complex
+                                        instrument.</p>
+                                    <p>SST or smooth sound transition, means a sound complete with its effects will
+                                        continue to be heard even when another program or combination is selected,
+                                        providing you hold the note that is. When another note is struck the new sound
+                                        will
+                                        be heard. As such there is no drop out of sound no matter what mode you are in,
+                                        a
+                                        keyboard players dream.</p>
+                                    <p>The nine synth engines work independently of each other and can be configured in
+                                        any way you want. The sounds are amazing and totally editable.
+                                        Karma is a sophisticated appegiator and is assigned to every combi & program,
+                                        this
+                                        brings the sounds to another dimension but can be turned off at the touch of a
+                                        button.</p>
+                                    <p>The sequencer is top of its class too with loads of possibilities for live work
+                                        etc.
+                                        The Kronos accepts audio in and provides a good quality sampler as well.
+                                        There are plenty of controllers on this instrument and more than enough to
+                                        satisfy
+                                        everyone.</p>
+                                    <p>Finally, one lead is all you need to connect to a DAW.
+                                        There are loads of vids on YouTube that are worth watching to get a better idea
+                                        of
+                                        Kronos or the Korg site of course.
+                                        Barbosa's Pianos are without doubt the company to use, they are cheaper than
+                                        anywhere else
+                                        and the service is excellent.<p>
+                                            <p>Regards, Martin James</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style=" background-color: #26C485; padding: 2vh 1vh 2vh 1vh;">
+                            <div class="row col-s12" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0; position: relative;">
+                                <div>
+                                    <div class="float-right" style="border:#26C485 1px solid; padding: 1vw;">
+                                        <div>
+                                            Total <img class="stars-small" style="float: right; margin-top: 5px;" src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Uso <img class="stars-small" style="float: right; margin-top: 5px;" src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Características <img class="stars-small" style="float: right; margin-top: 5px;"
+                                                src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Sonido <img class="stars-small" style="float: right; margin-top: 5px;" src="https://bit.ly/2Et29OR">
+                                        </div>
+                                        <div>
+                                            Fabricación <img class="stars-small" style="float: right; margin-top: 5px;"
+                                                src="https://bit.ly/2Et29OR">
+                                        </div>
+                                    </div>
+                                    <small>Mr.Y, 30/02/2019</small>
+                                    <p>
+                                        I use Korg Kronos workstation at home and during worship at church. It has made
+                                        a difference in all the atmosphere that it creates when I play it. Slim design
+                                        and robust frame. But the most important thing is the sound it emits. I love it
+                                        and I can't find nothing wrong with it.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="padding: 3vh 2vh 3vh 2vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 2vh 1vh 2vh 1vh;">
+                            <div class="row col-s12" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0; position: relative;">
+
+                                <h4 class="col-s12">Productos Relacionados</h4>
+                                <div class="row col-s12">
+                                    <div class="col-3" style="border:#26C485 1px solid">
+                                        <img src="https://bit.ly/2NIe7Z9" />
+                                        <h6>Korg Kronos LS</h6>
+                                    </div>
+                                    <div class="col-3" style="border:#26C485 1px solid">
+                                        <img src="https://bit.ly/2C87vPc" />
+                                        <h6>Korg Kronos 61</h6>
+                                    </div>
+                                    <div class="col-3" style="border:#26C485 1px solid">
+                                        <img src="https://bit.ly/2C60Fdc" />
+                                        <h6>Yamaha Montsage 6</h6>
+                                    </div>
+                                    <div class="col-3" style="border:#26C485 1px solid">
+                                        <img src="https://bit.ly/2HherNi" />
+                                        <h6>Roland Fa-07</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-3">
+                    <div class="container" style="padding: 3vh 1vh 0 1vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 2vh 1vh 2vh 1vh;">
+                            <div class="row col-s12 text-center" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0;">
+                                <h1 style="margin: auto">3129€</h1>
+                                <ul class="list-unstyled">
+                                    <li>Sin gastos de envío e incluyendo IVA.</li>
+                                    <li style="color: #26C485">Disponible en estos momentos</li>
+                                </ul>
+                                <button type="button" class="btn my-button">A la cesta</button>
+                                <div class="col-9 text-left">
+                                    <strong>Evaluación general</strong>
+                                </div>
+                                <div class="col-3">
+                                    <img class="stars-small" src="https://bit.ly/2Et29OR">
+                                </div>
+                                <div class="col-9 text-left">
+                                    Uso
+                                </div>
+                                <div class="col-3">
+                                    <img class="stars-small" src="https://bit.ly/2Et29OR">
+                                </div>
+                                <div class="col-9 text-left">
+                                    Características
+                                </div>
+                                <div class="col-3">
+                                    <img class="stars-small" src="https://bit.ly/2Et29OR">
+                                </div>
+                                <div class="col-9 text-left">
+                                    Sonido
+                                </div>
+                                <div class="col-3">
+                                    <img class="stars-small" src="https://bit.ly/2Et29OR">
+                                </div>
+                                <div class="col-9 text-left">
+                                    Fabricación
+                                </div>
+                                <div class="col-3">
+                                    <img class="stars-small" src="https://bit.ly/2Et29OR">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="padding: 3vh 1vh 0 1vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 2vh 1vh 2vh 1vh;">
+                            <div class="row col-s12 text-center" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0;">
+                                <h4>Compartir producto</h4>
+                                <i class="col-4 fab fa-facebook-square" style="color:#3b5998"></i>
+                                <i class="col-4 fab fa-twitter-square" style="color:#55acee"></i>
+                                <i class="col-4 fab fa-pinterest" style="color:#cc2127"></i>
+                                <i class="col-4 fab fa-google-plus-square" style="color:#dd4b39"></i>
+                                <i class="col-4 fab fa-whatsapp-square" style="color:#25d366;"></i>
+                                <i class="col-4 far fa-envelope" style="color:#ff9900;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="padding: 3vh 1vh 0 1vh;">
+                        <div class="row" style=" background-color: #26C485; padding: 2vh 1vh 2vh 1vh;">
+                            <div class="row col-s12 text-center" style="background-color: #ffffff; padding: 3vh 2vh 3vh 2vh; margin-left: 0; margin-right: 0;">
+                                <div class="col-6">
+                                    <img src="https://bit.ly/2HfD3WX" style="width: 100%" />
+                                    Garantía de 3 años
+                                </div>
+                                <div class="col-6">
+                                    <img src="https://bit.ly/2HlkCjN" style="width: 100%" />
+                                    Garantía devolución de dinero de 30 días
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <footer class="page-footer col-12 row" style="background-color: #2F0601">
+        <div class="col-3"></div>
+        <div class="row col-9">
+            <div class="col-6">
+                <ul class="social-network" style="list-style: none;">
+                    <li><a href="#" class="icon" title="Facebook"><i style="color:#3b5998;" class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#" class="icon" title="Twitter"><i style="color:#55acee" class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#" class="icon" title="Google +"><i style="color:#dd4b39" class="fab fa-google-plus-square"></i></i></a></li>
+                    <li><a href="#" class="icon" title="Linkedin"><i style="color: #0976b4" class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <ul class="social-network" style="list-style: none;">
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <div class="modal fade" id="identificacion">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#login"><i class="fas fa-user mr-1"></i>
+                            Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#registro"><i class="fas fa-user-plus mr-1"></i>
+                            Registrar</a>
+                    </li>
+                </ul>
+
+
+                <div class="tab-content" style="background: linear-gradient(rgba(50, 144, 143, 0.6), rgba(47, 6, 1, 0.7)), url('https://bit.ly/2UnLVxw') ; background-size: cover;">
+                    <div class="tab-pane active" id="login">
+                        <div class="modal-body">
+                            <form data-toggle="validator">
+                                <div>
+                                    <label for="loginEmail" class="control-label">Email</label>
+                                    <input type="email" id="loginEmail" class="form-control" required>
+                                </div>
+                                <div>
+                                    <label for="loginPassword" class="control-label">Contraseña</label>
+                                    <input type="password" id="loginPassword" class="form-control" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-info">Inicia Sesión</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="registro">
+                        <div class="modal-body">
+                            <form>
+                                <div>
+                                    <label for="registerEmail" class="control-label">Email</label>
+                                    <input type="email" id="registerEmail" class="form-control" required>
+                                </div>
+                                <div>
+                                    <label for="registerPassword" class="control-label">Contraseña</label>
+                                    <input type="password" id="registerPassword" class="form-control" required>
+                                </div>
+                                <div>
+                                    <label for="registerPassword2" class="control-label">Repetir contraseña</label>
+                                    <input type="password" id="registerPassword2" class="form-control" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-info">Regístrate</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        bootstrapValidate('#loginEmail', 'email:El Email introducido es inválido');
+        bootstrapValidate('#registerEmail', 'email:El Email introducido es inválido');
+        bootstrapValidate('#registerPassword2', 'matches:#registerPassword:Las contraseñas no coinciden');
+        bootstrapValidate('#loginEmail', 'required:El Email es requerido');
+        bootstrapValidate('#loginPassword', 'required:La contraseña es requerida');
+        bootstrapValidate('#registerEmail', 'required:El Email es requerido');
+        bootstrapValidate('#registerPassword', 'required:La contraseña es requerida')
+        bootstrapValidate('#registerPassword2', 'required:La contraseña es requerida')
+    </script>
+
+</body>
+
+</html>
